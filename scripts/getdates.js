@@ -1,23 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('footer');
+const full = document.querySelector("#full");
+const worldfull = document.querySelector("#world-full");
+const short = document.querySelector("#short");
+const medium = document.querySelector("#medium");
+const year = document.querySelector("#year");
+const month = document.querySelector("#month");
+const day = document.querySelector("#day");
+const dayofweek = document.querySelector("#dayofweek");
 
-  if (footer) {
+// use the date object
+const today = new Date();
 
-    let firstParagraph = footer.querySelector('p:first-child');
-    if (!firstParagraph) {
-      firstParagraph = document.createElement('p');
-      footer.appendChild(firstParagraph);
-    }
-    const currentYear = new Date().getFullYear();
-    firstParagraph.textContent = `© ${currentYear} Everett Havey. All rights reserved.`;
+full.innerHTML = `Last Modified <span class="highlight">${new Intl.DateTimeFormat(
+	"en-US",
+	{
+		dateStyle: "full"
+	}
+).format(today)}</span>`;
+worldfull.innerHTML = `UK: <span class="highlight">${new Intl.DateTimeFormat(
+	"en-UK",
+	{
+		dateStyle: "full"
+	}
+).format(today)}</span>`;
+short.innerHTML = `Short: <span class="highlight">${new Intl.DateTimeFormat(
+	"en-US",
+	{
+		dateStyle: "short"
+	}
+).format(today)}</span>`;
+medium.innerHTML = `Medium: <span class="highlight">${new Intl.DateTimeFormat(
+	"en-US",
+	{
+		dateStyle: "medium"
+	}
+).format(today)}</span>`;
 
-    let secondParagraph = footer.querySelector('p:nth-child(2)');
-    if (!secondParagraph) {
-      secondParagraph = document.createElement('p');
-      footer.appendChild(secondParagraph);
-    }
-    const lastModified = new Date(document.lastModified);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    secondParagraph.textContent = `Last modified: ${lastModified.toLocaleDateString(undefined, options)}`;
-  }
-});
+year.innerHTML = `getFullYear(): <span class="highlight">${today.getFullYear()}</span>`;
+month.innerHTML = `getMonth(): <span class="highlight">${today.getMonth()}</span>`;
+day.innerHTML = `getDate(): <span class="highlight">${today.getDate()}</span>`;
+dayofweek.innerHTML = `getDay(): <span class="highlight">${today.getDay()}</span>`;
