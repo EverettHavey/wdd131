@@ -1,0 +1,25 @@
+:root {
+    --heading-background-color: darkblue;
+    --heading-text-color: #2810a0;
+    --heading-font: 'Montserrat', Helvetica, sans-serif;
+    --padding: 1rem;
+    --border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+nav ul {
+    display: flex;
+}
+
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.card {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
