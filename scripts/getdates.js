@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       footer.appendChild(firstParagraph);
     }
     const currentYear = new Date().getFullYear();
-    firstParagraph.textContent = `© ${currentYear} Your Company Name. All rights reserved.`;
+    firstParagraph.textContent = `© ${currentYear} Everett Havey. All rights reserved.`;
 
     let secondParagraph = footer.querySelector('p:nth-child(2)');
     if (!secondParagraph) {
