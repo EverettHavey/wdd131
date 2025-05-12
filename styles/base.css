@@ -12,9 +12,21 @@
 	box-sizing: border-box;
 }
 
+h1 {
+	background-color: #6267fe;
+	padding: 1rem;
+	border: 1px solid rgb(0 0 0 / 10%);
+	font-size: 2rem;
+	text-align: center;
+}
+
 nav ul {
     display: flex;
     justify-content: space-evenly;
+}
+
+nav a:hover{
+    text-decoration: overline;
 }
 
 body {
