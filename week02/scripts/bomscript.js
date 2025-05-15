@@ -10,7 +10,18 @@ li.textContent = input.value;
 
 deleteButton.textContent = 'X';
 
-li.append(deleteButton);
+button.addEventListener('click', function() {
+    if (input.value.trim() !== '') { 
+        li.textContent = input.value;
+        li.append(deleteButton);
+        list.append(li);
+     }
+});
 
-list.append(li);
+deleteButton.addEventListener('click', function () {
+    list.removeChild(li);
+    input.focus();
+    input.value = '';
+    input.focus();
+});
 
