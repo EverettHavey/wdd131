@@ -1,3 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #6267fe;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    background-color: #056db3;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+}
+
+nav a:hover {
+    text-decoration: overline;
+}
+
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* styles/layout.css */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -5,73 +52,58 @@ main {
 }
 
 .card {
-    flex: 1 1 400px;
+    flex: 1 1 400px; /* Increased base width to accommodate layout changes */
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.1);
     padding: 1rem;
     background-color: #ddd;
     color: #333;
+    display: flex; /* Enable flexbox for items within the card */
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the card */
 }
 
 .about-card {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto auto;
-    align-items: start;
+    align-items: flex-start; /* Align items to the left in the about card */
+    text-align: left; /* Align text to the left in the about card */
 }
 
-.about-card h2 {
-    grid-column: 1 / 3;
-    margin-top: 0;
+.about-card img {
+    max-width: 150px; /* Adjust image size as needed */
+    height: auto;
     margin-bottom: 0.5rem;
-}
-
-.about-card .about-content {
-    grid-column: 1;
-    grid-row: 2;
-    position: relative;
+    align-self: flex-end; /* Push image to the right */
+    margin-left: 1rem; /* Add some space between text and image */
 }
 
 .about-card .intro {
-    margin-top: 0;
-    margin-bottom: 2rem;
-}
-
-.about-card .flag-image {
-    max-width: 80px;
-    height: auto;
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
-}
-
-.about-card .profile-image {
-    grid-column: 2;
-    grid-row: 2;
-    max-width: 150px;
-    height: auto;
-    align-self: start;
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 1rem; /* Add space below the intro paragraph */
 }
 
 .about-card .location-heading {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; /* Add more space before the location heading */
     margin-bottom: 0.5rem;
 }
 
-.about-card > p:last-child {
-    grid-column: 1 / 3;
-    grid-row: 4;
-}
-
-.card:not(.about-card) h2 {
+.card h2 {
+    color: #056db3;
+    margin-bottom: 0.5rem;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    width: 100%; /* Ensure heading takes full width for alignment context */
+}
+
+.card h2:first-child {
+    margin-top: 0;
 }
 
 .card p {
     margin-bottom: 0.5rem;
+}
+
+.card:last-child {
+    
 }
 
 footer p {
@@ -84,4 +116,3 @@ footer p {
 #full {
     font-style: italic;
 }
-
