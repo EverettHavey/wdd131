@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 | Dynamic Web Fundamentals - Everett Havey</title>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="script" href="scripts/getdates.js">
-    <script src="getdates.js" defer></script>
+    <link rel="stylesheet" href="styles/layout.css">
     <meta name="description" content="WDD 131 | Everett Havey">
     <meta name="author" content="Everett Havey">
 
@@ -30,24 +29,24 @@
 
     <main>
         <section class="card">
-            <a></a>
-            <a></a>
             <h2>About</h2>
-
             <img src="images/Profile.webp" alt="Everett">
-
-            <p>paragraph</p>
+            <p>This is a brief paragraph about Everett. You can add more details here.</p>
         </section>
         <section class="card">
-            <h2>Other</h2>
+            <h2>Location</h2>
             <img src="images/jpflag.png" alt="Japan Flag">
+            <p>Currently residing in Tokyo, Japan.</p>
         </section>
     </main>
 
     <footer>
-        <p><span id="2025">Everett Havey | Tokyo, Japan</span></p>
-<p id="full"></p>
+        <p>&copy; <span id="year"></span> Everett Havey | Tokyo, Japan</p>
+        <p id="full">Last Modified: <span class="highlight"></span></p>
     </footer>
+
+    <script src="scripts/layout.js" defer></script>
+    <script src="scripts/updatedate.js" defer></script>
 
 </body>
 </html>
