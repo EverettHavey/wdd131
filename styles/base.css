@@ -1,49 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1 {
-    background-color: #6267fe;
-    padding: 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    font-size: 2rem;
-    text-align: center;
-    color: white;
-}
-
-nav {
-    background-color: #056db3;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-}
-
-nav a:hover {
-    text-decoration: overline;
-}
-
-body {
-    font-size: 16px;
-    font-family: Roboto, Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
 main {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +5,7 @@ main {
 }
 
 .card {
-    flex: 1 1 400px; /* Increased base width */
+    flex: 1 1 400px;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.1);
     padding: 1rem;
@@ -60,40 +14,60 @@ main {
 }
 
 .about-card {
-    display: flex; /* Enable flexbox for items within the about card */
-    flex-direction: row; /* Arrange items horizontally */
-    align-items: flex-start; /* Align items to the top */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    align-items: start;
 }
 
-.about-card > img {
-    max-width: 150px; /* Adjust image size */
-    height: auto;
-    margin-left: 1rem; /* Space between text and image */
-    align-self: flex-end; /* Push image to the right of the text block */
+.about-card h2 {
+    grid-column: 1 / 3;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
-.about-card > div {
-    flex-grow: 1; /* Allow text content to take up remaining space */
+.about-card .about-content {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
 }
 
 .about-card .intro {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-card .flag-image {
+    max-width: 80px;
+    height: auto;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+}
+
+.about-card .profile-image {
+    grid-column: 2;
+    grid-row: 2;
+    max-width: 150px;
+    height: auto;
+    align-self: start;
 }
 
 .about-card .location-heading {
+    grid-column: 1 / 3;
+    grid-row: 3;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.card h2 {
-    color: #056db3;
-    margin-top: 0; /* Reset top margin for all h2 in cards */
-    margin-bottom: 0.5rem;
+.about-card > p:last-child {
+    grid-column: 1 / 3;
+    grid-row: 4;
 }
 
 .card:not(.about-card) h2 {
-    margin-top: 1rem; /* Add top margin for h2 in other cards */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .card p {
@@ -110,3 +84,4 @@ footer p {
 #full {
     font-style: italic;
 }
+
