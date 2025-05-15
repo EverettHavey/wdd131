@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 | Dynamic Web Fundamentals - Everett Havey</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
     <meta name="description" content="WDD 131 | Everett Havey">
     <meta name="author" content="Everett Havey">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
 </head>
 <body>
     <h1>WDD 131 – Dynamic Web Fundamentals - Everett Havey</h1>
@@ -28,15 +24,17 @@
     </header>
 
     <main>
-        <section class="card">
-            <h2>About</h2>
+        <section class="card about-card">
+            <h2>About Everett</h2>
+            <p class="intro">A brief introduction about Everett can go here.</p>
             <img src="images/Profile.webp" alt="Everett">
-            <p>This is a brief paragraph about Everett. You can add more details here.</p>
+            <h2 class="location-heading"><u>Current Location</u></h2>
+            <img src="images/jpflag.png" alt="Japan Flag">
+            <p>Currently residing in Minato City, Tokyo, Japan.</p>
         </section>
         <section class="card">
-            <h2>Location</h2>
-            <img src="images/jpflag.png" alt="Japan Flag">
-            <p>Currently residing in Tokyo, Japan.</p>
+            <h2>Extra</h2>
+            <p>Content for this section will be added later.</p>
         </section>
     </main>
 
@@ -45,7 +43,6 @@
         <p id="full">Last Modified: <span class="highlight"></span></p>
     </footer>
 
-    <script src="scripts/layout.js" defer></script>
     <script src="scripts/updatedate.js" defer></script>
 
 </body>

@@ -1,4 +1,3 @@
-/* styles/base.css */
 * {
     margin: 0;
     padding: 0;
@@ -45,3 +44,69 @@ body {
     color: #333;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 400px; /* Increased base width */
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #333;
+}
+
+.about-card {
+    display: flex; /* Enable flexbox for items within the about card */
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.about-card > img {
+    max-width: 150px; /* Adjust image size */
+    height: auto;
+    margin-left: 1rem; /* Space between text and image */
+    align-self: flex-end; /* Push image to the right of the text block */
+}
+
+.about-card > div {
+    flex-grow: 1; /* Allow text content to take up remaining space */
+}
+
+.about-card .intro {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.about-card .location-heading {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card h2 {
+    color: #056db3;
+    margin-top: 0; /* Reset top margin for all h2 in cards */
+    margin-bottom: 0.5rem;
+}
+
+.card:not(.about-card) h2 {
+    margin-top: 1rem; /* Add top margin for h2 in other cards */
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#full {
+    font-style: italic;
+}
