@@ -50,7 +50,7 @@ nav ul {
   align-items: center;
   gap: 10px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: #8800ff;
   position: absolute;
   top: 60px;
   left: 0;
@@ -73,7 +73,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #ddd;
+  background-color: #dddddd;
   color: #007bff;
 }
 
