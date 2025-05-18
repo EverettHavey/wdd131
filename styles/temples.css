@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color: #eee;
+  background-color: #8800ff;
   padding: 15px 20px;
   display: flex; 
   flex-direction: column; 
@@ -25,46 +25,47 @@ header {
 
 .hamburger-button,
 .close-button {
-  display: block; /* Show on mobile */
+  display: block;
   position: absolute;
-  top: 15px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
+  top: 15px;
+  right: 20px;
   background: none;
   border: none;
   font-size: 1.5em;
   cursor: pointer;
-  color: #555; /* Example color */
+  color: #555;
   z-index: 10;}
 
 header h1 {
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: none; /* Initially hide the menu on mobile */
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 100%;
-  background-color: #f0f0f0; /* Example background for the open menu */
+  background-color: #f0f0f0;
   position: absolute;
-  top: 60px; /* Adjust based on header height */
+  top: 60px;
   left: 0;
   z-index: 5;
 }
 
 nav ul.open {
-  display: flex; /* Show the menu when the 'open' class is added */
+  display: flex;
 }
 
 nav a {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #555;
+  color: #ffffff;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   width: 100%;
@@ -76,7 +77,6 @@ nav a:hover {
   color: #007bff;
 }
 
-/* Hide hamburger and close buttons on larger screens */
 @media (min-width: 768px) {
   .hamburger-button,
   .close-button {
@@ -84,7 +84,7 @@ nav a:hover {
   }
 
   nav ul {
-    display: flex !important; /* Override inline style to show menu */
+    display: flex !important;
     flex-direction: row;
     align-items: center;
     position: static;
