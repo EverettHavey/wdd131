@@ -59,12 +59,17 @@
   footer {
     padding: 20px 30px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-top: 40px;
+    text-align: center;
   }
 
   footer p {
-    margin: 0;
+    margin: 5px 0;
+  }
+
+  footer p:first-child {
+    order: -1; 
   }
 }
