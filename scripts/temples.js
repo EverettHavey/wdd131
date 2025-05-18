@@ -5,22 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     yearSpan.textContent = currentYear;
   }
 
-  // Get the last modified date
   const modifiedSpan = document.querySelector('#full .highlight');
   if (modifiedSpan) {
     const lastModified = new Date(document.lastModified);
     modifiedSpan.textContent = lastModified.toLocaleDateString() + ' ' + lastModified.toLocaleTimeString();
   }
 
-  // Hamburger menu functionality
   const hamburgerButton = document.createElement('button');
   hamburgerButton.classList.add('hamburger-button');
-  hamburgerButton.innerHTML = '&#9776;'; // Hamburger icon
+  hamburgerButton.innerHTML = '&#9776;';
 
   const closeButton = document.createElement('button');
   closeButton.classList.add('close-button');
-  closeButton.innerHTML = '&#10006;'; // Close 'X' icon
-  closeButton.style.display = 'none'; // Initially hidden
+  closeButton.innerHTML = '&#10006;';
+  closeButton.style.display = 'none';
 
   const nav = document.querySelector('nav');
   const navUl = document.querySelector('nav ul');
@@ -41,18 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
       hamburgerButton.style.display = 'block';
     });
 
-    // Close menu if window is resized to a larger view
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) { // Adjust breakpoint if needed
+      if (window.innerWidth >= 768) {
         navUl.classList.remove('open');
         closeButton.style.display = 'none';
-        hamburgerButton.style.display = 'none'; // Hide hamburger on larger screens
+        hamburgerButton.style.display = 'none'; 
       } else if (!navUl.classList.contains('open')) {
-        hamburgerButton.style.display = 'block'; // Show hamburger on smaller screens if closed
+        hamburgerButton.style.display = 'block'; 
       }
     });
 
-    // Initial state check on load
     if (window.innerWidth >= 768) {
       hamburgerButton.style.display = 'none';
     }
