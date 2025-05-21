@@ -17,23 +17,19 @@
   <source
     media="(min-width: 1200px)"
     srcset="images/hero-desktop-large.webp 1x, images/hero-desktop-large@2x.webp 2x"
-    type="image/webp"
-  />
+    type="image/webp"/>
   <source
     media="(min-width: 992px)"
     srcset="images/hero-desktop-medium.webp 1x, images/hero-desktop-medium@2x.webp 2x"
-    type="image/webp"
-  />
+    type="image/webp"/>
   <source
     media="(min-width: 768px)"
     srcset="images/hero-tablet.webp 1x, images/hero-tablet@2x.webp 2x"
-    type="image/webp"
-  />
+    type="image/webp"/>
   <source
     media="(max-width: 767px)"
     srcset="images/hero-mobile.webp 1x, images/hero-mobile@2x.webp 2x"
-    type="image/webp"
-  />
+    type="image/webp"/>
   <img
     src="images/hero-mobile.jpg"
     srcset="
@@ -44,8 +40,19 @@
     "
     sizes="100vw"
     alt="A descriptive alt text for your hero image"
-    loading="eager"
-  />
+    loading="eager"/>
+    
+
+    <div class="weather-box">
+        <h2 class="weather-heading">Weather</h2>
+        <img
+            id="weather-icon"
+            src="images/placeholder-weather.png"
+            alt="Current weather icon"
+            class="weather-image"/>
+        <p id="weather-description" class="weather-text">Loading weather...</p>
+        <p id="weather-temperature" class="weather-text"></p>
+    </div>
 </picture>
     </main>
     <footer>
