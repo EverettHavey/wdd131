@@ -13,7 +13,40 @@
         <h1>Everett Havey | WDD 131 Week 03 Project</h1>
     </header>
     <main>
-
+        <picture>
+  <source
+    media="(min-width: 1200px)"
+    srcset="images/hero-desktop-large.webp 1x, images/hero-desktop-large@2x.webp 2x"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 992px)"
+    srcset="images/hero-desktop-medium.webp 1x, images/hero-desktop-medium@2x.webp 2x"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 768px)"
+    srcset="images/hero-tablet.webp 1x, images/hero-tablet@2x.webp 2x"
+    type="image/webp"
+  />
+  <source
+    media="(max-width: 767px)"
+    srcset="images/hero-mobile.webp 1x, images/hero-mobile@2x.webp 2x"
+    type="image/webp"
+  />
+  <img
+    src="images/hero-mobile.jpg"
+    srcset="
+      images/hero-mobile.jpg        767w,
+      images/hero-tablet.jpg       768w,
+      images/hero-desktop-medium.jpg 992w,
+      images/hero-desktop-large.jpg  1200w
+    "
+    sizes="100vw"
+    alt="A descriptive alt text for your hero image"
+    loading="eager"
+  />
+</picture>
     </main>
     <footer>
         <p>&copy;<span id="year">2025</span> Everett Havey 🌴 Photo Album🌴 Japan</p>
