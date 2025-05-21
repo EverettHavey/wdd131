@@ -13,51 +13,21 @@
         <h1>london</h1>
     </header>
     <main>
-       <section class="hero-section">
-            <picture>
-                <source
-                    media="(min-width: 1200px)"
-                    srcset="images/hero-desktop-large.webp 1x, images/hero-desktop-large@2x.webp 2x"
-                    type="image/webp"/>
-                <source
-                    media="(min-width: 992px)"
-                    srcset="images/hero-desktop-medium.webp 1x, images/hero-desktop-medium@2x.webp 2x"
-                    type="image/webp"/>
-                <source
-                    media="(min-width: 768px)"
-                    srcset="images/hero-tablet.webp 1x, images/hero-tablet@2x.webp 2x"
-                    type="image/webp"/>
-                <source
-                    media="(max-width: 767px)"
-                    srcset="images/hero-mobile.webp 1x, images/hero-mobile@2x.webp 2x"
-                    type="image/webp"/>
-
-                <img
-                    src="images/london.jpg"
-                    srcset="
-                        images/hero-mobile.jpg         767w,
-                        images/hero-tablet.jpg         768w,
-                        images/hero-desktop-medium.jpg 992w,
-                        images/hero-desktop-large.jpg  1200w
-                    "
-                    sizes="100vw"
-                    alt="A descriptive alt text for your hero image"
-                    loading="eager"/>
-            </picture>
-        </section>
-    
-
-    <div class="weather-box">
-        <h2 class="weather-heading">Weather</h2>
-        <img
-            id="weather-icon"
-            src="images/weather.png.png"
-            alt="Current weather icon"
-            class="weather-image"/>
-        <p id="weather-description" class="weather-text">Loading weather...</p>
-        <p id="weather-temperature" class="weather-text"></p>
-    </div>
-</picture>
+        <section class="hero-image">
+            <img src="images/london.jpg" alt="london" class="london-image">
+       </section>
+       
+       
+        <div class="weather-box">
+            <h2 class="weather-heading">Weather</h2>
+            <img
+                id="weather-icon"
+                src="images/weather.png.png"
+                alt="Current weather icon"
+                class="weather-image"/>
+            <p id="weather-description" class="weather-text">Loading weather...</p>
+            <p id="weather-temperature" class="weather-text"></p>
+        </div>
     </main>
     <footer>
         <p>&copy;<span id="year">2025</span> Everett Havey 🌴 Photo Album🌴 Japan</p>
