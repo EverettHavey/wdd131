@@ -8,13 +8,13 @@
     <meta name="author" content="Everett Havey">
     <link rel="stylesheet" href="styles/place.css">
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>london</h1>
+        <h1>London</h1>
     </header>
     <main>
         <section class="hero-image">
@@ -28,28 +28,36 @@
                 sizes="(max-width: 600px) 480px,
                        (max-width: 900px) 800px,
                        1200px">
-       </section>
-       
-       
-        <div class="weather-box">
-            <h2 class="weather-heading">Weather</h2>
-            <img
-                id="weather-icon"
-                src="images/Weather.svg"
-                alt="Current weather icon"
-                class="weather-image"/>
-            <p id="weather-description" class="weather-text">Loading weather...</p>
-            <p id="weather-temperature" class="weather-text"></p>
-        </div>
+        </section>
 
-        <div class="weather-container">
-            <h2>Current Weather</h2>
-            <div class="weather-details">
-                <p><strong>Temperature:</strong> <span id="current-temp">5°C</span></p>
-                <p><strong>Wind Speed:</strong> <span id="current-wind">10 km/h</span></p>
-                <p><strong>Wind Chill:</strong> <span id="windchill-factor">N/A</span></p>
+        <section class="info-grid">
+            <div class="weather-box">
+                <h2 class="weather-heading">Current Weather</h2>
+                <img
+                    id="weather-icon"
+                    src="images/Weather.svg"
+                    alt="Current weather icon"
+                    class="weather-image"/>
+                <p id="weather-description" class="weather-text">Loading weather...</p>
+                <p id="weather-temperature" class="weather-text"></p>
+                <div class="weather-details">
+                    <p><strong>Temperature:</strong> <span id="current-temp">5°C</span></p>
+                    <p><strong>Wind Speed:</strong> <span id="current-wind">10 km/h</span></p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill-factor">N/A</span></p>
+                </div>
             </div>
-        </div>
+
+            <div class="data-facts-box">
+                <h2>Data and Facts</h2>
+                <ul>
+                    <li><strong>Population:</strong> Approximately 9 million (as of 2023)</li>
+                    <li><strong>Area:</strong> 1,572 km² (607 sq mi)</li>
+                    <li><strong>Founded:</strong> c. 43 AD by the Romans</li>
+                    <li><strong>Major Landmarks:</strong> Buckingham Palace, Tower of London, British Museum, Big Ben</li>
+                    <li><strong>Fun Fact:</strong> London has over 170 museums.</li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy;<span id="year">2025</span> Everett Havey 🌴 Country Page🌴</p>
