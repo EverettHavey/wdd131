@@ -48,6 +48,12 @@ footer {
   text-align: center;
   max-width: 110px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* New positioning for weather-box */
+  position: absolute; /* Take it out of the normal document flow */
+  top: 20px; /* Distance from the top of the 'main' element */
+  right: 20px; /* Distance from the right of the 'main' element */
+  z-index: 10; /* Ensure it appears above the image */
 }
 
 .weather-heading {
@@ -104,6 +110,12 @@ footer {
   .hero-image {
     height: 40vh;
   }
+  .weather-box {
+    position: relative; /* Revert to relative for smaller screens */
+    top: auto;
+    right: auto;
+    margin: 20px auto; /* Center it horizontally below the image */
+  }
 }
 
 .dm-serif-text-regular {
@@ -119,6 +131,7 @@ footer {
 }
 
 main {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
