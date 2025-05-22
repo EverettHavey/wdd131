@@ -114,3 +114,48 @@ footer {
   font-weight: 400;
   font-style: italic;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex; /* Use flexbox to easily position the weather box */
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: flex-start; /* Aligns content to the top */
+    min-height: 90vh; /* Ensures the body takes up most of the viewport height */
+}
+
+.weather-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px; /* Fixed width for the weather box */
+    margin-right: 20px; /* Space between the box and any potential content to its right */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.weather-container h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.weather-details p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 1em;
+}
+
+.weather-details strong {
+    color: #333;
+}
+
+#windchill-factor.na {
+    color: #888;
+    font-style: italic;
+}
