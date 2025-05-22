@@ -7,34 +7,6 @@ footer {
 	text-align: center;
 }
 
-.hero-image {
-  width: 100%; /* Ensures the hero section takes the full width of its parent */
-  max-height: 500px; /* Sets a maximum height for the hero section */
-  overflow: hidden; /* Hides any overflow if the image is larger than the container */
-  display: flex; /* Uses flexbox for easy centering of the image */
-  justify-content: center; /* Centers the image horizontally */
-  align-items: center; /* Centers the image vertically */
-}
-
-.london-image {
-  width: 100%; /* Makes the image fill the width of its parent (.hero-image) */
-  height: auto; /* Maintains the aspect ratio of the image */
-  display: block; /* Removes any extra space below the image */
-  object-fit: cover; /* Ensures the image covers the entire area, cropping if necessary */
-}
-
-@media (max-width: 767px) {
-  .hero-section {
-    height: 40vh;
-  }
-  .hero-content h1 {
-    font-size: 1.8em;
-  }
-  .hero-content p {
-    font-size: 0.9em;
-  }
-}
-
 .weather-box {
   background-color: #4CAF50;
   color: white;
@@ -78,4 +50,27 @@ footer {
   gap: 30px;
   max-width: 900px;
   padding: 10px;
+}
+
+.hero-image {
+  width: 100%; /* Ensures the hero section takes the full width of its parent */
+  max-height: 500px; /* Sets a maximum height for the hero section */
+  overflow: hidden; /* Hides any overflow if the image is larger than the container */
+  display: flex; /* Uses flexbox for easy centering of the image */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+}
+
+.london-image {
+  width: 100%; /* Makes the image fill the width of its parent (.hero-image) */
+  height: auto; /* Maintains the aspect ratio of the image */
+  display: block; /* Removes any extra space below the image */
+  object-fit: cover; /* Ensures the image covers the entire area, cropping if necessary */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .hero-image { /* Target the hero-image section itself for height adjustments */
+    height: 40vh; /* Adjust height for smaller screens */
+  }
 }
