@@ -14,7 +14,16 @@
     </header>
     <main>
         <section class="hero-image">
-            <img src="images/London.webp" alt="london" class="london-image">
+            <img
+                src="images/London.webp"
+                alt="london"
+                class="london-image"
+                srcset="images/London-small.webp 480w,
+                        images/London-medium.webp 800w,
+                        images/London-large.webp 1200w"
+                sizes="(max-width: 600px) 480px,
+                       (max-width: 900px) 800px,
+                       1200px">
        </section>
        
        
