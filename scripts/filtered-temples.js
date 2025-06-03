@@ -87,25 +87,37 @@ const temples = [
 
 createTempleCard();
 
-function createTempleCard(filteredTemples) {
-    // Use forEach for iterating over an array
+function displayTemples(filteredTemples) {
+    const gridContainer = document.querySelector(".res-grid");
+    // Clear existing content to prevent duplicates when refiltering
+    gridContainer.innerHTML = ''; 
+
+    if (!gridContainer) {
+        console.error("Error: Element with class 'res-grid' not found.");
+        return; // Exit if container not found
+    }
+
+    // Check if filteredTemples is an array before trying to iterate
+    if (!Array.isArray(filteredTemples)) {
+        console.error("Error: displayTemples expects an array, but received:", filteredTemples);
+        return; // Exit if not an array
+    }
+
     filteredTemples.forEach(temple => {
         let card = document.createElement("section");
-        let nameElement = document.createElement("h3"); // Renamed to avoid conflict with 'name' property
-        let locationElement = document.createElement("p"); // Renamed for clarity
-        let dedicationElement = document.createElement("p"); // Renamed for clarity
-        let areaElement = document.createElement("p"); // Renamed for clarity
+        let nameElement = document.createElement("h3");
+        let locationElement = document.createElement("p");
+        let dedicationElement = document.createElement("p");
+        let areaElement = document.createElement("p");
         let img = document.createElement("img");
 
         nameElement.textContent = temple.templeName;
 
-        // Use template literals (backticks ``) for string interpolation
         locationElement.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
         dedicationElement.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-        areaElement.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+        areaElement.innerHTML = `<span class="label">Size:</span> ${temple.area.toLocaleString()} sq ft`; // Use toLocaleString for better number formatting
 
         img.setAttribute("src", temple.imageUrl);
-        // Use template literals for the alt text as well
         img.setAttribute("alt", `${temple.templeName} temple`);
         img.setAttribute("loading", "lazy");
 
@@ -115,12 +127,48 @@ function createTempleCard(filteredTemples) {
         card.appendChild(areaElement);
         card.appendChild(img);
 
-        // Ensure an element with the class "res-grid" exists in your HTML
-        const gridContainer = document.querySelector(".res-grid");
-        if (gridContainer) {
-            gridContainer.appendChild(card);
-        } else {
-            console.error("Error: Element with class 'res-grid' not found.");
-        }
+        gridContainer.appendChild(card);
     });
 }
+
+// Call the function initially to display all temples when the page loads
+// Encapsulate this in a DOMContentLoaded listener for best practice, though defer helps too
+document.addEventListener('DOMContentLoaded', () => {
+    displayTemples(temples);
+});
+
+// Now, you'll need to add the filtering logic. Here's a basic structure:
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior (page reload)
+        const filter = event.target.textContent; // Get the text of the clicked link (Home, Old, New, Large, Small)
+
+        let filteredList = [];
+
+        if (filter === "Home") {
+            filteredList = temples; // Show all temples
+        } else if (filter === "Old") {
+            // Example: Temples dedicated before 1900
+            filteredList = temples.filter(temple => {
+                const year = parseInt(temple.dedicated.split(',')[0]);
+                return year < 1900;
+            });
+        } else if (filter === "New") {
+            // Example: Temples dedicated in 2000 or later
+            filteredList = temples.filter(temple => {
+                const year = parseInt(temple.dedicated.split(',')[0]);
+                return year >= 2000;
+            });
+        } else if (filter === "Large") {
+            // Example: Temples with area > 90000 sq ft
+            filteredList = temples.filter(temple => temple.area > 90000);
+        } else if (filter === "Small") {
+            // Example: Temples with area <= 15000 sq ft
+            filteredList = temples.filter(temple => temple.area <= 15000);
+        }
+        
+        displayTemples(filteredList); // Call the display function with the filtered list
+    });
+});
