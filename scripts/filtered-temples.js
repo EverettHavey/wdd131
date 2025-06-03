@@ -66,21 +66,19 @@ const temples = [
   imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/las-vegas-nevada/400x250/las-vegas-temple-exterior-001-wallpaper.jpg"
   },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
+ {
+    templeName: "Laie Hawaii Temple",
+    location: "Laie, Hawaii, United States",
+    dedicated: "1919, November, 27",
+    area: 47224, // Or whatever the correct area is if you have it
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/laie-hawaii/400x250/laie-hawaii-temple-1033214-wallpaper.jpg"
+    },
+ {
+    templeName: "Idaho Falls Idaho Temple",
+    location: "Idaho Falls, Idaho, United States",
+    dedicated: "1945, September, 23",
+    area: 92177,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/idaho-falls-idaho/400x250/idaho-falls-temple-lds-200720-wallpaper.jpg"
+    },
   // Add more temple objects here...
 ];
