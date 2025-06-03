@@ -143,8 +143,9 @@ const temples = [
 createTempleCard(temples);
 
 function createTempleCard(filteredTemples) {
-    document.querySelector("res-grid").innerHTML = "";
-    filteredTemples.array.forEach(temple => {
+    document.querySelector(".res-grid").innerHTML = "";
+
+    filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -152,12 +153,12 @@ function createTempleCard(filteredTemples) {
         let area = document.createElement("p");
         let img = document.createElement("img");
 
-        name.textContent = temple.templeName
-        location.innerHTML = <span class="label">location:</span> ;(temple.location);
-        dedication.innerHTML = <span class="label">Dedicated:</span> ;(temple.dedicated);
-        area.innerHTML = <span class="label">Size:</span> ;(temple.area);
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area}`;
         img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", {temple,templeName}, temple);
+        img.setAttribute("alt", temple.templeName);
         img.setAttribute("loading", "lazy");
 
         card.appendChild(name);
