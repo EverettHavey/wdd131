@@ -145,9 +145,17 @@ createTempleCard(temples);
 const oldLink = document.getElementById('oldLink');
 
 oldLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("2000")));
-});
+    const oldTemples = temples.filter(temple => {
+        const yearMatch = temple.dedicated.match(/(\d{4})$/);
+        if (yearMatch && yearMatch[1]) {
+            const dedicationYear = parseInt(yearMatch[1], 10);
+            return dedicationYear < 2000;
+        }
+        return false;
+    });
 
+    createTempleCard(oldTemples);
+});
 function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
 
