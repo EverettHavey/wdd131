@@ -151,6 +151,13 @@ function createTempleCard(filteredTemples) {
         let dedication = document.createElement("p");
         let area = document.createElement("p");
         let img = document.createElement("img");
-        
+
+        name.textContent = temple.templeName
+        location.innerHTML = <span class="label">location:</span> ;(temple.location);
+        dedication.innerHTML = <span class="label">Dedicated:</span> ;(temple.dedicated);
+        area.innerHTML = <span class="label">Size:</span> ;(temple.area);
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", {temple,templeName}, temple);
+        img.setAttribute("loading", "lazy");
     });
 }
