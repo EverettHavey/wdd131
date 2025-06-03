@@ -140,3 +140,17 @@ const temples = [
   // Add more temple objects here...
 ];
 
+createTempleCard(temples);
+
+function createTempleCard(filteredTemples) {
+    document.querySelector("res-grid").innerHTML = "";
+    filteredTemples.array.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+        
+    });
+}
