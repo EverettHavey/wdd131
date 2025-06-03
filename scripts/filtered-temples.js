@@ -142,22 +142,53 @@ const temples = [
 
 createTempleCard(temples);
 
-const oldLink = document.getElementById('oldLink');
+const navLinks = document.querySelectorAll('nav a');
 
-    if (oldLink) {
-        oldLink.addEventListener("click", () => {
-            const oldTemples = temples.filter(temple => {
+navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
 
-                const yearMatch = temple.dedicated.match(/^(\d{4}),/);
-                if (yearMatch && yearMatch[1]) {
-                    const dedicationYear = parseInt(yearMatch[1], 10);
-                    return dedicationYear < 2000;
-                }
-                return false;
-            });
-            createTempleCard(oldTemples);
-        });
-    }
+        navLinks.forEach(l => l.classList.remove('active'));
+
+        event.target.classList.add('active');
+
+        const filterId = event.target.id;
+        let filteredTemples = [];
+
+        switch (filterId) {
+            case 'homeLink':
+                filteredTemples = temples;
+                document.querySelector('main h2').textContent = 'Home';
+                break;
+            case 'oldLink':
+                filteredTemples = temples.filter(temple => {
+                    const yearMatch = temple.dedicated.match(/^(\d{4}),/);
+                    return yearMatch && parseInt(yearMatch[1], 10) < 2000;
+                });
+                document.querySelector('main h2').textContent = 'Old Temples (Dedicated before 1900)';
+                break;
+            case 'newLink':
+                filteredTemples = temples.filter(temple => {
+                    const yearMatch = temple.dedicated.match(/^(\d{4}),/);
+                    return yearMatch && parseInt(yearMatch[1], 10) > 2000; 
+                });
+                document.querySelector('main h2').textContent = 'New Temples (Dedicated after 2000)';
+                break;
+            case 'largeLink':
+                filteredTemples = temples.filter(temple => temple.area > 90000);
+                document.querySelector('main h2').textContent = 'Large Temples (Area > 90,000 sq ft)';
+                break;
+            case 'smallLink':
+                filteredTemples = temples.filter(temple => temple.area < 10000);
+                document.querySelector('main h2').textContent = 'Small Temples (Area < 10,000 sq ft)';
+                break;
+            default:
+                filteredTemples = temples;
+                document.querySelector('main h2').textContent = 'Home';
+        }
+        createTempleCard(filteredTemples);
+    });
+});
 
 function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
