@@ -165,7 +165,7 @@ navLinks.forEach(link => {
                     const yearMatch = temple.dedicated.match(/^(\d{4}),/);
                     return yearMatch && parseInt(yearMatch[1], 10) < 2000;
                 });
-                document.querySelector('main h2').textContent = 'Old Temples (Dedicated before 1900)';
+                document.querySelector('main h2').textContent = 'Old Temples (Dedicated before 2000)';
                 break;
             case 'newLink':
                 filteredTemples = temples.filter(temple => {
