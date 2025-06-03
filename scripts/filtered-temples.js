@@ -61,7 +61,7 @@ const temples = [
   {
   templeName: "Las Vegas Nevada Temple",
   location: "Las Vegas, Nevada",
-  dedicated: "16–18 December 1989",
+  dedicated: "1989, December, 16",
   area: 10.3,
   imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/las-vegas-nevada/400x250/las-vegas-temple-exterior-001-wallpaper.jpg"
