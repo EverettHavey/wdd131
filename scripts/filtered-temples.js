@@ -165,22 +165,22 @@ navLinks.forEach(link => {
                     const yearMatch = temple.dedicated.match(/^(\d{4}),/);
                     return yearMatch && parseInt(yearMatch[1], 10) < 2000;
                 });
-                document.querySelector('main h2').textContent = 'Old Temples (Dedicated before 2000)';
+                document.querySelector('main h2').textContent = 'Old Temples';
                 break;
             case 'newLink':
                 filteredTemples = temples.filter(temple => {
                     const yearMatch = temple.dedicated.match(/^(\d{4}),/);
                     return yearMatch && parseInt(yearMatch[1], 10) > 2000; 
                 });
-                document.querySelector('main h2').textContent = 'New Temples (Dedicated after 2000)';
+                document.querySelector('main h2').textContent = 'New Temples';
                 break;
             case 'largeLink':
                 filteredTemples = temples.filter(temple => temple.area > 90000);
-                document.querySelector('main h2').textContent = 'Large Temples (Area > 90,000 sq ft)';
+                document.querySelector('main h2').textContent = 'Large Temples';
                 break;
             case 'smallLink':
                 filteredTemples = temples.filter(temple => temple.area < 10000);
-                document.querySelector('main h2').textContent = 'Small Temples (Area < 10,000 sq ft)';
+                document.querySelector('main h2').textContent = 'Small Temples';
                 break;
             default:
                 filteredTemples = temples;
