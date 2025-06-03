@@ -142,6 +142,12 @@ const temples = [
 
 createTempleCard(temples);
 
+const oldLink = document.getElementById('oldLink');
+
+oldLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.dedicated.includes("2000")));
+});
+
 function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
 
