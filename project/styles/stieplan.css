@@ -1,55 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
 
+/* --- Basic Variables --- */
 :root {
     --primary-color: #2c3e50;  /* A simple, dark slate blue */
-    --background-color: #ecf0f1; /* Light grey background */
-    --box-color: #ffffff;      /* White for the content box */
+    --background-color: #f4f4f9; /* Lighter grey background */
+    --box-color: #ffffff;
     --text-color: #333333;
-    --border-color: #bdc3c7;
+    --border-color: #dddddd;
+    --shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
+/* --- General Body Styles --- */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding: 20px; /* Add some padding around the whole page */
 }
 
-/* --- The Single Content Box in Main --- */
-.content-box {
+/* --- Box Styling for Header, Main, and Footer --- */
+header, main, footer {
     background-color: var(--box-color);
     border: 1px solid var(--border-color);
-    padding: 2rem; /* Internal spacing for the box */
-    max-width: 900px; /* Keeps the box from getting too wide on large screens */
-    margin: 0 auto; /* Centers the box on the page */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* A very subtle shadow */
+    box-shadow: var(--shadow);
+    max-width: 900px; /* Keeps the boxes from getting too wide */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
 }
 
-/* --- Basic Typography within the Box --- */
-h1, h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+/* Add spacing between the boxes */
+header {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
+main {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    margin-bottom: 2rem; /* Add some space at the very bottom */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Typography within the boxes --- */
 h1 {
     font-size: 2.2rem;
-    text-align: center; /* Center the main title */
-    margin-bottom: 2rem;
+    color: var(--primary-color);
+    margin: 0; /* Remove default margin to respect header padding */
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: 1.5rem;
+    color: var(--primary-color);
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-color); /* Separates sections */
+    border-bottom: 1px solid var(--border-color); /* Separates sections inside main */
+    margin-bottom: 1rem;
 }
 
-/* Give sections some breathing room */
+/* Give sections breathing room inside the main box */
 section {
     margin-bottom: 2rem;
 }
 
-/* Ensure the last section doesn't have extra bottom margin */
 section:last-child {
     margin-bottom: 0;
 }
@@ -58,23 +84,20 @@ p {
     margin-bottom: 0.5rem;
 }
 
+footer p {
+    margin: 0.25rem 0;
+}
+
 /* --- Wireframe Image Styling --- */
 img.about-image {
-    width: 100%; /* Make images fit their container */
-    max-width: 600px; /* But don't let them get too big */
-    display: block; /* Helps with centering */
-    margin: 1rem auto; /* Center images within their section */
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto; /* Center images */
     border: 1px solid var(--border-color);
 }
 
-/* --- Basic Footer --- */
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #7f8c8d;
-}
-
+/* --- Highlight for Footer Date --- */
 .highlight {
     font-weight: bold;
 }
