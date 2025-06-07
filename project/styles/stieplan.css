@@ -9,7 +9,6 @@
     --shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
-/* --- General Body Styles --- */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
@@ -17,18 +16,16 @@ body {
     line-height: 1.6;
 }
 
-/* --- Box Styling for Header, Main, and Footer --- */
 header, main, footer {
     background-color: var(--box-color);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow);
-    max-width: 900px; /* Keeps the boxes from getting too wide */
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
 }
 
-/* Add spacing between the boxes */
 header {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -40,17 +37,16 @@ main {
 }
 
 footer {
-    margin-bottom: 2rem; /* Add some space at the very bottom */
+    margin-bottom: 2rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #555;
+    color: #655252;
 }
 
-/* --- Typography within the boxes --- */
 h1 {
     font-size: 2.2rem;
     color: var(--primary-color);
-    margin: 0; /* Remove default margin to respect header padding */
+    margin: 0;
 }
 
 nav {
@@ -66,11 +62,10 @@ h2 {
     font-size: 1.5rem;
     color: var(--primary-color);
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-color); /* Separates sections inside main */
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 1rem;
 }
 
-/* Give sections breathing room inside the main box */
 section {
     margin-bottom: 2rem;
 }
@@ -87,16 +82,14 @@ footer p {
     margin: 0.25rem 0;
 }
 
-/* --- Wireframe Image Styling --- */
 img.about-image {
     width: 100%;
     max-width: 600px;
     display: block;
-    margin: 1rem auto; /* Center images */
+    margin: 1rem auto;
     border: 1px solid var(--border-color);
 }
 
-/* --- Highlight for Footer Date --- */
 .highlight {
     font-weight: bold;
 }
