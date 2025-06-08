@@ -52,7 +52,7 @@ products.forEach(product => {
     productNameSelect.appendChild(option);
 });
 
-if (window.location.pathname.endsWith('review.html')) {
+if (window.location.pathname.endsWith('form.html')) {
     let reviewCount = localStorage.getItem('numReviews');
     if (reviewCount) {
         reviewCount = parseInt(reviewCount) + 1;
