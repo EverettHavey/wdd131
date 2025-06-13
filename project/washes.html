@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Dynamic Web Fundamentals - Everett Havey</title>
+    <meta name="description" content="WDD 131 | Everett Havey">
+    <meta name="author" content="Everett Havey">
+    <link rel="stylesheet" href="styles/project.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1><img src="images/SplashyDashiezLogo.png" alt="Splashy Dashiez Logo"></h1>
+        </div>
+        <button class="hamburger-button">☰</button>
+        <button class="close-button" style="display: none;">✕</button>
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Washes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="top-section-grid">
+            <div class="location-input-container">
+                <h2>Find a Wash Location</h2>
+                <input type="text" id="locationInput" placeholder="Enter your location">
+                <button id="findLocationButton">Search</button>
+            </div>
+            <div class="car-wash-image-main">
+                <img src="images/CarwashImage1.jpeg" alt="Modern Car Wash Bay">
+            </div>
+        </section>
+
+        <section class="display-section">
+            <h2>Welcome to Splashy Dashiez!</h2>
+            <p>Your ultimate destination for a sparkling clean ride. We offer state-of-the-art car wash services designed to give your vehicle the care it deserves.</p>
+            <p>Explore our membership programs, learn interesting facts about car washing, and find a convenient location near you.</p>
+
+            <div class="membership-program-section">
+                <h3>Our Membership Programs</h3>
+                <p>Join our exclusive membership program today and enjoy unlimited washes, special discounts, and priority service. Keep your car sparkling clean all year round with our flexible plans designed to fit your needs.</p>
+                <p>Choose from a variety of tiers, including Basic, Premium, and Ultimate, each offering increasing benefits and savings. Sign up online or at any of our convenient locations!</p>
+            </div>
+            <div class="facts-section">
+                <div class="fact-item">
+                    <div class="img-placeholder"><img src="images/Imagefact1.jpg" alt="Ultimate Wash/Premium Wash with Protective Coatings" width="250" height="75"></div>
+                    Ultimate Wash/Premium Wash with Protective Coatings
+                </div>
+                <div class="fact-item">
+                    <div class="img-placeholder"><img src="images/Imagefact2.jpg" alt="Ceramic or Graphene Infused Wash" width="250" height="75"></div>
+                    Ceramic or Graphene Infused Wash
+                </div>
+                <div class="fact-item">
+                    <div class="img-placeholder"><img src="images/Imagefact3.jpg" alt="Monthly Unlimited Wash Club with Top-Tier Plan" width="250" height="75"></div>
+                    Monthly Unlimited Wash Club with Top-Tier Plan
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Everett Havey | Tokyo, Japan</p>
+        <p id="full">Last Modified: <span class="highlight"></span></p>
+    </footer>
+    <script src="scripts/project.js" defer></script>
+</body>
+</html>
