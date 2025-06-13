@@ -35,20 +35,23 @@ header {
     box-sizing: border-box;
 }
 
-header img {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 250px;
-    height: 250px;
-}
-
 header h1 {
     margin: 0;
-    color: #ffffff;
     flex-grow: 1;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header h1 img {
+    position: static;
+    transform: none;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    display: block;
 }
 
 .hamburger-button,
@@ -134,16 +137,21 @@ nav a:hover {
         padding: 0 100px;
     }
 
-    header img {
+    header h1 {
+        flex-grow: 1;
+        text-align: center;
+        display: block;
+        position: relative;
+        height: auto;
+    }
+
+    header h1 img {
         position: absolute;
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
-    }
-
-    header h1 {
-        text-align: center;
-        flex-grow: 1;
+        width: 80px;
+        height: 80px;
     }
 
     nav h2 {
