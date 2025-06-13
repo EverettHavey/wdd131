@@ -30,7 +30,7 @@ header {
     justify-content: center;
     width: 100%;
     position: relative;
-    min-height: 80px;
+    min-height: 50px;
     padding: 0 100px;
     box-sizing: border-box;
 }
@@ -45,11 +45,11 @@ header h1 {
     height: 100%;
 }
 
-header h1 img {
+header img {
     position: static;
     transform: none;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     display: block;
 }
@@ -150,8 +150,8 @@ nav a:hover {
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     nav h2 {
