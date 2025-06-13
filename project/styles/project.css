@@ -182,8 +182,6 @@ nav a:hover {
         max-width: 150px;
     }
 
-    nav li:not(:last-child) {
-    }
 
     nav a {
         width: auto;
