@@ -30,26 +30,27 @@ header {
     justify-content: center;
     width: 100%;
     position: relative;
-    min-height: 50px;
+    min-height: 250px;
     padding: 0 100px;
     box-sizing: border-box;
 }
 
 header h1 {
     margin: 0;
-    flex-grow: 1;
+    flex-grow: 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: auto;
 }
 
-header img {
+header h1 img {
     position: static;
     transform: none;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
     display: block;
 }
@@ -135,23 +136,26 @@ nav a:hover {
 
     .header-top {
         padding: 0 100px;
+        min-height: 120px;
+        justify-content: center;
     }
 
     header h1 {
-        flex-grow: 1;
+        flex-grow: 0;
         text-align: center;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        height: auto;
+        height: 100%;
+        left: auto;
+        transform: none;
     }
 
     header h1 img {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 60px;
-        height: 60px;
+        position: static;
+        width: 120px;
+        height: 120px;
     }
 
     nav h2 {
@@ -273,11 +277,11 @@ main {
 .membership-program-section {
     background-color: #f9f9f9;
     padding: 30px;
-    margin-top: 20px;
     text-align: center;
     font-size: 1.2em;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    margin-top: 20px;
 }
 
 .facts-section {
