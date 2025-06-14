@@ -127,7 +127,10 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    gap: 10px;
 }
 
 .top-section-grid h3 {
@@ -205,7 +208,6 @@ nav a:hover {
         max-width: 150px;
     }
 
-
     nav a {
         width: auto;
         text-align: center;
@@ -220,16 +222,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.top-section-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: start;
-    padding: 20px;
-    background-color: #e0e0e0;
-    border-radius: 8px;
 }
 
 .location-input-container {
