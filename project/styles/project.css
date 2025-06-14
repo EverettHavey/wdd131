@@ -148,6 +148,25 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+.hero-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.car-wash-image-main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
 @media (min-width: 768px) {
     .hamburger-button,
     .close-button {
@@ -262,13 +281,6 @@ main {
     background-color: #008fcc;
 }
 
-.car-wash-image-main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
 
 .display-section {
     padding: 20px;
