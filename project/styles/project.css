@@ -123,10 +123,6 @@ nav a:hover {
 }
 
 .top-section-grid {
-    text-align: center;
-}
-
-.top-section-grid {
     display: flex; 
     flex-direction: column;
     align-items: center;
