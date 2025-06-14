@@ -122,6 +122,17 @@ nav a:hover {
     color: #ffffff;
 }
 
+.top-section-grid {
+    text-align: center;
+}
+
+.top-section-grid {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 @media (min-width: 768px) {
     .hamburger-button,
     .close-button {
