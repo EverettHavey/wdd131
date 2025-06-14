@@ -54,7 +54,6 @@ function handleResize() {
         }
     }
 }
-r
 window.addEventListener('resize', handleResize);
 
 document.addEventListener('DOMContentLoaded', handleResize);
